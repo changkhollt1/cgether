@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} Poin Of Sale {% endblock %}
+{% block content %}
+    {% for order in Order_data %}
+        <h4>{{ order.date|date:'d-m-Y'}}<a href=" {{order.id}}">{{order.table}}</a></h4>
+        <img src='{{order.image.url}}' width='500px' height='300px' />
+    {% endfor %}
+
+    {% comment %} cau hinh nut next {% endcomment %}
+    <br/>
+    {% if page_obj.has_next %}
+        <a href='{{request.path}}?page={{page_obj.next_page_number}}'>Tiep theo</a>
+    {% endif %}
+
+{% endblock %}
+
+

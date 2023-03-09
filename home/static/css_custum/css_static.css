@@ -1,0 +1,45 @@
+
+
+.navbar-brand img{
+    max-height: 4em;
+}
+.container-fluid{
+    background-color: black;
+    padding: 0.5em;
+}
+.nav-item{
+    padding: 0.5em;
+}
+.nav-item a{
+    color: white;
+}
+.nav-item a:hover, .nav-item a:active, .dropdown:hover>a{
+    color: bisque;
+}
+
+/* hien thi dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: 0.6 all;
+    background-color: black;
+    /* overflow: auto; */
+  } 
+
+.dropdown-item:hover{
+    background-color: rgb(49, 41, 41);
+} 
+
+#navbarNavDropdown{
+    /* background-color: aqua; */
+    justify-content: flex-end;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding-top: 0px;
+    z-index: 2;
+}
+.content_top{
+    height: 7.5em;
+}
+

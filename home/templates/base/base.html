@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css_custum/css_static.css' %}">  
+    <script src="{% static 'js/bootstrap.js'%}"></script>
+    {% block css %}{% endblock %}
+
+
+    <title>{% block title %}{%  endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">
+                <img src="{% static 'images/[CG]-logo-01 (1).png' %}" alt="You logo">
+            </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">TRANG CHU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">VE CGETHER</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MÔ HÌNH
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-item">Tong quan</a></li>
+                            <li><a href="/cuoi_corner" class="dropdown-item">Cuoi Corner</a></li>
+                            <li><a href="" class="dropdown-item">Com nha cuoi</a></li>
+                            <li><a href="" class="dropdown-item">Cuoi Coffee</a></li>
+                            <li><a href="" class="dropdown-item">Chuong tinh ai</a></li>
+                            <li><a href="" class="dropdown-item">Cuoi street</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'name_pos' %}" class="nav-link">Point Of Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'register_user' %}" class="nav-link">Dang ky</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">LIEN HE</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login">
+                {% if user.username %}
+                    <p> Xin chao {{user.username}} </p>
+                    <p><a href='{% url "logout" %}'>Dang xuat</a></p>
+                {% else %}
+                    <p><a href='{% url "register_user" %}'>Dang ky</a>||<a href='{% url "login" %}'>Dang nhap</a></p>
+
+                {% endif %}
+            </div>
+        </div>
+        
+    </nav>
+    <div class="content_top"></div>
+    <div class="content_body">
+        {% if messages %}
+            <ul class="messages" style="list-style-type:none">
+                {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+        {%  block content %}
+
+        {% endblock %}
+    </div>
+    <footer class="bg-black text-white p-5">
+        <h1 class="slogan">CGETHER CORPORATION</h1>
+        <h4 class="noti">Sign up with your email address to reeive news and updates</h4>
+        <form action="">
+            <input type="email" name="email" id="">
+            <button>Gui</button>
+        </form>
+        <ul id="company-detail">
+            <li class="address">172 Tran van On, P. Phu Hoa, TDM, BD</li>
+            <li class="email">cgether@gmail.com</li>
+            <li class="phone">0848.315.631 - 0975.771.841</li>
+        </ul>
+    </footer>
+    
+        
+</body>
+</html>

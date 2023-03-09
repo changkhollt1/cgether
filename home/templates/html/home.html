@@ -1,0 +1,162 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+CGETHER
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css_custum/css_home.css' %}">  
+{% endblock %}
+
+
+{% block content %}
+<div class="content-body">
+    <img src="{% static 'images/background1.jpg' %}" alt="">
+    <div class="marquee">
+        <span>ALL SHAPE ARE WELCOME ALL SHAPE ARE WELCOME ALL SHAPE ARE WELCOME ALL SHAPE ARE WELCOME</span>
+    </div>
+    <div class="introduce">
+        <div class="text">
+            <p>C-Gether là một công ty chuyên cung cấp các giải pháp và dịch vụ giải trí, vui chơi dành riêng cho giới trẻ, đặc biệt tại tỉnh Bình Dương.</p>
+        </div>
+        <div class="img">
+            <img src="{% static 'images/cuoibeer.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="child_member">
+            <div class="title">CÁC THƯƠNG HIỆU CON CỦA C GETHER</div>
+            <div class="body">
+                <div class="card" >
+                    <img class="card-img-top" src="{% static 'images/cuoibeer.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">CUỘI CORNER SNACK&BEER</h5>
+                      <p class="card-text"></p>
+                      <a href="./cuoi_corner" class="btn btn-primary">Xem Them</a>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card-img-top" src="{% static 'images/cuoibeer.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">CUỘI CORNER SNACK&BEER</h5>
+                      <p class="card-text"></p>
+                      <a href="#" class="btn btn-primary">Xem Them</a>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card-img-top" src="{% static 'images/cuoibeer.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">CUỘI CORNER SNACK&BEER</h5>
+                      <p class="card-text"></p>
+                      <a href="#" class="btn btn-primary">Xem Them</a>
+                    </div>
+                </div>
+                <div class="card" >
+                    <img class="card-img-top" src="{% static 'images/cuoibeer.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">CUỘI CORNER SNACK&BEER</h5>
+                      <p class="card-text"></p>
+                      <a href="#" class="btn btn-primary">Xem Them</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/cuoibeer.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">CUỘI CORNER SNACK&BEER</h5>
+                      <p class="card-text"></p>
+                      <a href="#" class="btn btn-primary">Xem Them</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/cuoibeer.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">CUỘI CORNER SNACK&BEER</h5>
+                      <p class="card-text"></p>
+                      <a href="#" class="btn btn-primary">Xem Them</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event">
+            <div class="title">SỰ KIỆN</div>
+            <div class="body">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                    <li data-target="#myCarousel" data-slide-to="6"></li>
+                    </ol> -->
+                
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                
+                    <div class="item active">
+                        <img src="{% static 'images/slide1.jpg' %}" alt="slide1" style="width:100%;">
+                        <div class="carousel-caption1">
+                        <h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/slide2.jpg' %}" alt="slide1" style="width:100%;">
+                        <div class="carousel-caption1">
+                            <h3>Los Angeles</h3>
+                            <p>LA is always so much fun!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/slide3.jpg' %}" alt="slide1" style="width:100%;">
+                        <div class="carousel-caption1">
+                        <h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/slide4.jpg' %}" alt="slide1" style="width:100%;">
+                        <div class="carousel-caption1">
+                        <h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/slide5.jpg' %}" alt="slide1" style="width:100%;">
+                        <div class="carousel-caption1">
+                        <h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'images/slide6.jpg' %}" alt="slide1" style="width:100%;">
+                        <div class="carousel-caption1">
+                        <h3>Los Angeles</h3>
+                        <p>LA is always so much fun!</p>
+                        </div>
+                    </div>
+                
+                   
+                
+                    </div>
+                
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                  
+            </div>
+        </div>
+    </div>   
+</div>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} {{order.table}} {% endblock %}
+{% block content %}
+    <h3><a href="{{order.id}}">{{order.table}}</a></h3>
+    <img src='{{order.image.url}}' width='500px' height='300px' />
+    <h6>on {{order.date}}</h6>
+    {{order.custumer}}
+
+    {% comment %} load binh luan {% endcomment %}
+    {% for comment in order.comment.all %}
+        <h4>{{comment.author}}</h4>
+        <h6><p>{{comment.date}}</p></h6>
+        <h6><p>{{comment.body}}</p></h6>
+    {% endfor %}
+    {% comment %} neu dang nhap moi hien html binh luan  {% endcomment %}
+    {% if user.username %}
+        <form action='{% url "name_pos_id" order.id %}' method='POST'>
+            {% csrf_token %}
+            <p><label>Binh luan:</label></p>
+            {{form.body}}
+            <input type='submit' value='binh luan'/>
+
+        </form>
+    {% endif %}
+{% endblock %}

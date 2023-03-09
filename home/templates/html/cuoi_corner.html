@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+CGETHER cuoi corner
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css_custum/css_home.css' %}">  
+{% endblock %}
+
+
+{% block content %}
+
+<div class="content">
+    <div class="body">
+        <div class="card">
+            <img src="{% static 'images/corner1.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner2.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner3.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner4.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner5.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner6.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner7.jpg' %}" alt="" class="card-img-top">
+        </div>
+        <div class="card">
+            <img src="{% static 'images/corner8.jpg' %}" alt="" class="card-img-top">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

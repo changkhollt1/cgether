@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+TAO TAI KHOAN
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <form action='{% url "register_user" %}' method='POST'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type='submit' value='dang ky'  />
+    </form>
+    
+</div>
+{% endblock %}
