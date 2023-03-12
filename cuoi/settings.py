@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     # 'livereload',
     'django.contrib.staticfiles',
-    'home',
     'POS',
+    'home.apps.HomeConfig',
+    
 ]
 
 MIDDLEWARE = [
