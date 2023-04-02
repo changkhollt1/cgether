@@ -1,5 +1,5 @@
 *{
-    color: red;
+    color: white;
     background-color: black;
 }
 .content-body img{
@@ -77,7 +77,4 @@
 .carousel{
     width: 95%;
 
-}
-.content_top{
-    height: 0;
 }
